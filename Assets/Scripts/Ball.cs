@@ -25,6 +25,13 @@ public class Ball : MonoBehaviour {
         return (ballPos.y - racketPos.y) / racketHeight;
     }
 
+    public void Reset()
+    {
+        // reset the ball position and restart the ball movement
+        transform.position = new Vector2(0, 0);
+        Start(); // restart the ball 
+    }
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.name == "RacketLeft") {
