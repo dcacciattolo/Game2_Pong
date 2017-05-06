@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour {
@@ -27,14 +28,16 @@ public class GameManagerScript : MonoBehaviour {
             playerTwoScore++;
 
         // now check if the player has won
-        if (playerOneScore == 2)
+        if (playerOneScore == 7)
         {
             GameOver(1);
+            SceneManager.LoadScene(2);
         }
 
-        else if (playerTwoScore == 2)
+        else if (playerTwoScore == 7)
         {
             GameOver(2);
+            SceneManager.LoadScene(3);
         }
 
         UpdateScoreText();
@@ -54,6 +57,7 @@ public class GameManagerScript : MonoBehaviour {
 
     void UpdateScoreText()
     {
-        scoreText.text = "" + playerOneScore.ToString() + "    " + playerTwoScore.ToString() + "";
+        scoreText.text = "" + playerOneScore.ToString() + "      " + playerTwoScore.ToString() + "";
     }
+
 }

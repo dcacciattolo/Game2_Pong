@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\GoalScript.cs" />
+    <Compile Include="Assets\Scripts\MenuButtonScript.cs" />
     <Compile Include="Assets\Scripts\MoveRacket.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
   </ItemGroup>
